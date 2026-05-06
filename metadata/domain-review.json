@@ -1,0 +1,73 @@
+{
+  "repo": "binary-parse-yaml-mark",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for yaml diagnostic reporting, using negative fixtures and human-readable error snapshots.",
+  "review_model": {
+    "terms": [
+      "token drift",
+      "grammar width",
+      "label quality",
+      "error locality"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "token drift",
+      "signal": 70,
+      "slack": 53,
+      "drag": 24,
+      "confidence": 94,
+      "score": 215,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "grammar width",
+      "signal": 82,
+      "slack": 54,
+      "drag": 32,
+      "confidence": 82,
+      "score": 204,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "label quality",
+      "signal": 71,
+      "slack": 48,
+      "drag": 29,
+      "confidence": 91,
+      "score": 194,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "error locality",
+      "signal": 82,
+      "slack": 41,
+      "drag": 9,
+      "confidence": 56,
+      "score": 234,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "token drift",
+      "signal": 81,
+      "slack": 54,
+      "drag": 27,
+      "confidence": 47,
+      "score": 182,
+      "lane": "ship"
+    }
+  ]
+}
