@@ -1,0 +1,32 @@
+{
+  "index": 394,
+  "phase": 2,
+  "batch": 44,
+  "name": "binary-parse-yaml-mark",
+  "planned_name": "binary-parse-yaml-mark",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for yaml diagnostic reporting, using negative fixtures and human-readable error snapshots.",
+  "repository_url": "https://github.com/ZachL111/binary-parse-yaml-mark",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 167,
+    "risk_penalty": 4,
+    "latency_penalty": 2,
+    "weight_bonus": 5,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
