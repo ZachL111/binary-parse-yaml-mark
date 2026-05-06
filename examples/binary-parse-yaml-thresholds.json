@@ -1,0 +1,17 @@
+{
+  "repo": "binary-parse-yaml-mark",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 200,
+    "watch": 96
+  },
+  "terms": [
+    "token drift",
+    "grammar width",
+    "label quality",
+    "error locality"
+  ]
+}

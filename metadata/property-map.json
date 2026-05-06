@@ -1,0 +1,28 @@
+{
+  "repo": "binary-parse-yaml-mark",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for yaml diagnostic reporting, using negative fixtures and human-readable error snapshots.",
+  "weights": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3
+  },
+  "thresholds": {
+    "ship": 200,
+    "watch": 96
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
